@@ -1,0 +1,18 @@
+name: Docker Hello World
+
+on:
+  push:
+    branches:
+      - "master"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout do Código
+      uses: actions/checkout@v2
+
+    - name: Executar Container Hello World
+      run: |
+        docker run hello-world
